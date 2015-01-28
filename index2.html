@@ -3,15 +3,18 @@
 <html  style="height:100%;overflow-x: visible;" >
 <head>
     <meta charset="utf-8">
-    <title>千次猛攻不如一次巧取</title>
+     <title>千次猛攻不如一次巧取</title>
     <link href="./stylesheets/stylesheet.css" rel="stylesheet" media="all">
      <script type="text/javascript">
       var scale = 1, ratio = 1 ;
-           (function () {
+
+      (function () {
            if (window.devicePixelRatio ==3) {
               scale = 0.5;
              
           }
+          
+   
           var text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no" />';
           document.write(text);
       })();
@@ -26,28 +29,30 @@
                    <div class="content_wnman" id="content_wnman">
                       <img src="./images/wnman.png" style="width: 63px;"></img>
                   </div>
-               <div class="content_head_bg" id="content_head_bg">
+               <div class="content_head_bg"  id="content_head_bg">
                  
                </div>
             
            </div>
             <div id="content_body"  class="content_body">
+
                 <div class="content_txt" id="content_txt"></div>
                 <div class="content_body_txt" id="content_body_txt"></div>
                <div class="btns" id="btns">
-                <span class="content_pop">提示：千次猛攻不如一次巧取</span>
+                  <span class="content_pop">提示：千次猛攻不如一次巧取</span>
                 <div id="content_btn1" class="content_btn1"></div>
                 <div id="content_btn2" class="content_btn2"></div>
               </div>
            </div>
-             <div  class="content_fooder" id="content_fooder">
+             <div  class="content_fooder2"  id="content_fooder2">
 
+                
              </div>
     </div>
      <script type="text/javascript">
      window.onload=function(){
       var i=0;
-        document.getElementById("content_fooder").addEventListener('touchend', function (e) {
+    document.getElementById("content_fooder2").addEventListener('touchend', function (e) {
 
       window.location.href= "http://static.egret-labs.org/h5game/haidao/v0.04/index.html?from=singlemessage&isappinstalled=0";
    }, false);
@@ -63,17 +68,18 @@
         else if(i==3){content_man.style.left="25%";
        document.getElementById("content_body_txt").innerHTML="你真勇敢!!!<br>要不要试试巧取?";}
         else  if(i==1000){
-                   fn();
+               fn();
       }else{
 document.getElementById("content_body_txt").innerHTML="你点了"+i+"次<br>要不要试试巧取?";
       }
      }, false);
      document.getElementById("content_btn2").addEventListener('touchend', function (e) { 
-                   fn();
-          }, false);
+                fn();
+
+     
+     }, false);
       
        function fn(){
-         document.getElementById("btns").style.display='none';
      document.getElementById("content_txt").style.display='none';
      document.getElementById("content_head_bg").style.display='none';
             document.getElementById("btns").style.display="none";
@@ -81,7 +87,8 @@ document.getElementById("content_body_txt").innerHTML="你点了"+i+"次<br>要�
            document.getElementById("content_wnman").style.display="none";
 
           document.getElementById("content_head").style.cssText='background:url("./images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;';
-            document.getElementById("content_fooder").style.cssText=" -webkit-box-flex: 1;margin-top: 5px;";
+          document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px; ";
+         
       }}
        </script>
 </body>
