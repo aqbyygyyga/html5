@@ -193,7 +193,7 @@ input::-moz-focus-inner {
   width: 220px;
   height: 73px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: -30px;
 }
 .content .content_body .content_body_txt {
   width: 50%;
@@ -202,9 +202,9 @@ input::-moz-focus-inner {
   background: #33301a;
   color: #fff;
   display: none;
-  font-size: 5px;
+  font-size: 0.3em;
   text-align: center;
-  margin-bottom: -15px;
+  margin-bottom: 5px;
 }
 .content .content_body .btns {
   margin: 0 auto;
@@ -217,6 +217,7 @@ input::-moz-focus-inner {
   background-size: 100% 100%;
   width: 110px;
   height: 83px;
+  display: block;
 }
 .content .content_body .btns .content_btn2 {
   background: url('../images/qiaoqu.png') no-repeat;
@@ -228,13 +229,14 @@ input::-moz-focus-inner {
 .content .content_pop {
   font-size: 10px;
   color: #1182e4;
+  display: block;
 }
 .content .content_fooder {
   height: 0%;
   display: -webkit-box;
   -webkit-box-align: center;
   -webkit-box-pack: center;
-  -webkit-box-flex: 2;
+  -webkit-box-flex: 2content_head;
   width: 90%;
   background: url('../images/footer_bg.png') no-repeat;
   background-size: 100% 100%;
@@ -251,16 +253,4 @@ input::-moz-focus-inner {
   background-size: 100% 100%;
   background-color: #fff282;
   margin: 0 auto;
-}
-@media screen and (max-device-width: 319px) {
-  .content .content_fooder .fooder_content .fooder_title {
-    display: block;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
-  .content .content_fooder .fooder_content .fooder_contentTXT {
-    display: block;
-    font-size: 0.8rem;
-    line-height: 0.8rem;
-  }
 }
