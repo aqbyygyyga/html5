@@ -216,16 +216,16 @@ input::-moz-focus-inner {
   background: url('../images/menggong.png') no-repeat;
   float: left;
   background-size: 100% 100%;
-  width: 110px;
-  height: 83px;
+  width: 120px;
+  height: 96px;
   display: block;
 }
 .content .content_body .btns .content_btn2 {
   background: url('../images/qiaoqu.png') no-repeat;
   float: right;
   background-size: 100% 100%;
-  width: 110px;
-  height: 83px;
+  width: 120px;
+  height: 96px;
 }
 .content .content_pop {
   font-size: 10px;
