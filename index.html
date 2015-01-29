@@ -35,9 +35,10 @@
                 <div class="content_txt" id="content_txt"></div>
                 <div class="content_body_txt" id="content_body_txt"></div>
                <div class="btns" id="btns">
-                <span class="content_pop">提示：千次猛攻不如一次巧取</span>
+             <span class="content_pop" style="display:none">提示：千次猛攻不如一次巧取</span>
                 <div id="content_btn1" class="content_btn1"></div>
                 <div id="content_btn2" class="content_btn2"></div>
+
               </div>
            </div>
              <div  class="content_fooder" id="content_fooder">
@@ -54,14 +55,15 @@
     document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
       i++;
       var man=document.getElementById("content_man");
+      document.getElementById("content_pop").style.display="block";
       document.getElementById("content_body_txt").style.display="block";
      document.getElementById("btns").style.height="100px"; 
      if(i==1){content_man.style.left="10%"; 
-        document.getElementById("content_body_txt").innerHTML="点1000次就能抱得美人归!</br>是真的!";}
+        document.getElementById("content_body_txt").innerHTML="你点了"+i+"次，点1000次就能抱得美人归!</br>是真的!这不是骗人的";}
         else if(i==2){content_man.style.left="15%";
-        document.getElementById("content_body_txt").innerHTML="你还真点!!!<br>要不要试试巧取?";}
+        document.getElementById("content_body_txt").innerHTML="你还真点!!!你点了"+i+"次<br>要不要试试巧取?点1000次就能抱得美人归!是真的!";}
         else if(i==3){content_man.style.left="25%";
-       document.getElementById("content_body_txt").innerHTML="你真勇敢!!!<br>要不要试试巧取?";}
+       document.getElementById("content_body_txt").innerHTML="你真勇敢!!!你点了"+i+"次<br>要不要试试巧取?点1000次就能抱得美人归!是真的!";}
         else  if(i==1000){
                    fn();
       }else{

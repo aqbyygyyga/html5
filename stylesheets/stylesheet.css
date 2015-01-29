@@ -194,17 +194,17 @@ input::-moz-focus-inner {
   width: 220px;
   height: 73px;
   margin: 0 auto;
-  margin-top: -30px;
+  margin-top: 0px;
 }
 .content .content_body .content_body_txt {
-  width: 50%;
+  width: 65%;
   height: 35px;
   margin: 5px auto;
   background: #33301a;
   color: #fff;
   display: none;
   font-size: 0.4em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 5px;
 }
 .content .content_body .btns {
