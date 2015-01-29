@@ -160,6 +160,22 @@ input::-moz-focus-inner {
   background-size: 100% 100%;
   z-index: 0;
 }
+.content .content_head .share {
+  background: url('../images/wxshare.png') no-repeat;
+  background-size: 100% 100%;
+  z-index: 0;
+  height: 110%;
+  position: absolute;
+  width: 80%;
+  left: 20%;
+}
+.content .content_head .share .share_txt {
+  position: absolute;
+  top: 90%;
+  color: #fff;
+  font-size: 0.45em;
+  margin-left: 8px;
+}
 .content .content_head .content_man {
   -webkit-transition: left .5s ease .1s;
   transition: left .5s ease .1s;

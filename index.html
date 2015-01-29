@@ -29,7 +29,7 @@
                <div class="content_head_bg"  id="content_head_bg">
                  
                </div>
-            
+              <div class="share"  id="share" style="display:none;"><span id="share_txt" class="share_txt">分享到朋友圈赚取微信红包</span></div>
            </div>
             <div id="content_body"  class="content_body">
 
@@ -81,18 +81,16 @@
      }, false);
       
        function fn(){
-         document.getElementById("content_body_txt").style.display="none";
-     document.getElementById("content_txt").style.display='none';
-     document.getElementById("content_head_bg").style.display='none';
+            document.getElementById("content_body_txt").style.display="none";
+            document.getElementById("content_txt").style.display='none';
+            document.getElementById("content_head_bg").style.display='none';
             document.getElementById("btns").style.display="none";
             document.getElementById("content_man").style.display="none";
-           document.getElementById("content_wnman").style.display="none";
-
-          document.getElementById("content_head").style.cssText='background:url("./images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;';
-          document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 2;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px; ";
-
-         
-      }}
+            document.getElementById("content_wnman").style.display="none";
+             document.getElementById("share").style.display="block";
+             document.getElementById("content_head").style.cssText='background:url("./images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;';
+            document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 2;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px; ";
+  }}
        </script>
 </body>
 </html>
