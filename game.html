@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	作者：wndsc
+	日期：2014年 12月 18日
+	描述：http://www.egret-labs.org/
+&lt;!--
+
+                  _oo0oo_
+                 088888880
+                 88" . "88
+                 (| -_- |)
+                  0\ = /0
+               ___/'---'\___
+             .' \\|     |// '.
+            / \\|||  :  |||// \
+           /_ ||||| -:- |||||- \
+          |   | \\\  -  /// |   |
+          | \_|  ''\---/''  |_/ |
+          \  .-\__  '-'  __/-.  /
+        ___'. .'  /--.--\  '. .'___
+     ."" '<  '.___\_<|>_/___.' >'  "".
+    | | : '-  \'.;'\ _ /';.'/ - ' : | |
+    \  \ '_.   \_ __\ /__ _/   .-' /  /
+====='-.____'.___ \_____/___.-'____.-'=====
+                  '=---='
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       佛祖保佑    财源滚滚: 流量爆满:
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>巧取海岛宝藏，100%送现金红包</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true"/>
+    <script src="launcher/jweixin-1.0.0.js" async="false"></script>
+    <script src="launcher/jweixin-1.0.0-additional.js" async="false"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+
+    </style>
+    <script>
+        var indexTime;
+        function checkRotation(){
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            var tipDiv=document.getElementById("tipDiv");
+            var gameDiv=document.getElementById("gameDiv");
+            if(w<h || window.orientation==180||window.orientation==0){
+                //alert("请在系统设置里打开屏幕旋转，并在横屏状态下玩游戏！");
+                gameDiv.style.display="none";
+                tipDiv.style.display="block";
+                tipDiv.style.textAlign="center";
+                tipDiv.style.width=w+"px";
+                tipDiv.style.height=h+"px";
+            }
+            if(w>h || window.orientation==90||window.orientation==-90){
+                gameDiv.style.display="none";
+                tipDiv.style.display="none";
+                indexTime = setTimeout(showGame, 300);
+            }
+        }
+
+        function showGame(){
+            clearTimeout(indexTime);
+            document.getElementById("gameDiv").style.display ="block";
+        }
+
+        function checkLogo(){
+            var logoDiv = document.getElementById("logoDiv");
+            var uiWidth = 960;
+            var uiHeight = 640;
+            var _scaleY = Math.min(window.innerWidth / uiWidth, 1);
+            var _scaleX = _scaleY;
+            var _topY = (window.innerHeight - uiHeight*_scaleY) / 2 + window.innerHeight * 0.5;
+            var _leftX = (window.innerWidth - uiWidth*_scaleX) / 2 + window.innerWidth*0.5;
+
+            logoDiv.style.width = 406;
+            logoDiv.style.height = 406;
+            logoDiv.style.webkitTransform = 'scale('+_scaleX+','+_scaleY+')';
+            logoDiv.style.top = (window.innerHeight*0.5 - 406*0.5)+'px';
+            logoDiv.style.left = (window.innerWidth*0.5 - 406*0.5)+'px';
+            logoDiv.style.display = 'block';
+        }
+
+    </script>
+
+</head>
+<body >
+<div style="position:relative;" id="gameDiv"></div>
+<div id="tipDiv" style="color: #ffffff;display:none;text-align:center;">
+    <span style="display:block;margin: 50px;font-size: 30px ">请在系统设置里打开屏幕旋转，并在横屏状态下玩游戏！</span><br/>
+    <img src="resource/rotateBg.png" >
+</div>
+<div style="display: none" id="logoDiv">
+    <img src="resource/assets/logo.png" >
+</div>
+<script>
+    checkLogo();
+</script>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader_rotation.js"></script>
+<script src="launcher/game-min.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+
+    /*
+     * wx.config( bodyConfig );
+     * 以及游戏启动
+     * */
+    function getSignPackage(){
+        app.starGame();
+        return;
+
+        //resultPanel.getInstance().checkRedBagHandler(4); //分享成功 后调用4
+        $.ajax({
+            url:"",
+            dataType:"json",
+            data:data,
+            cache:false,
+            success:function(res){
+                // 填充微信相关的
+
+                //启动游戏
+                app.starGame();
+            }
+        })
+    }
+    /*
+     * 红包状态检测
+     * */
+    function checkRedBag(){
+        resultPanel.getInstance().checkRedBagHandler(2);
+        return;
+        $.ajax({
+            url:"",
+            dataType:"json",
+            data:data,
+            cache:false,
+            success:function(res){
+                // 1 :可以正常领取
+                // 2 :（今天红包领完了）
+                // 3 :（已经领过红包）
+
+                resultPanel.getInstance().checkRedBagHandler(1);
+            }
+        })
+    }
+</script>
+</body>
+</html>
