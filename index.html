@@ -1,110 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	作者：wndsc
+	日期：2014年 12月 18日
+	描述：http://www.egret-labs.org/
+&lt;!--
 
-<!DOCTYPE html>
-<html  style="height:100%;overflow-x: visible;" >
+                  _oo0oo_
+                 088888880
+                 88" . "88
+                 (| -_- |)
+                  0\ = /0
+               ___/'---'\___
+             .' \\|     |// '.
+            / \\|||  :  |||// \
+           /_ ||||| -:- |||||- \
+          |   | \\\  -  /// |   |
+          | \_|  ''\---/''  |_/ |
+          \  .-\__  '-'  __/-.  /
+        ___'. .'  /--.--\  '. .'___
+     ."" '<  '.___\_<|>_/___.' >'  "".
+    | | : '-  \'.;'\ _ /';.'/ - ' : | |
+    \  \ '_.   \_ __\ /__ _/   .-' /  /
+====='-.____'.___ \_____/___.-'____.-'=====
+                  '=---='
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       佛祖保佑    财源滚滚: 流量爆满:
+-->
+<html>
 <head>
     <meta charset="utf-8">
-     <title>千次猛攻不如一次巧取</title>
-    <link href="./stylesheets/stylesheet.css" rel="stylesheet" media="all">
-     <script type="text/javascript">
-      var scale = 1, ratio = 1 ;
+    <title>巧取海岛宝藏，100%送现金红包</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-      (function () {
-          
-          
-   
-          var text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no" />';
-          document.write(text);
-      })();
-  </script>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true"/>
+    <script src="launcher/jweixin-1.0.0.js" async="false"></script>
+    <script src="launcher/jweixin-1.0.0-additional.js" async="false"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+
+    </style>
+    <script>
+        var indexTime;
+        function checkRotation(){
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            var tipDiv=document.getElementById("tipDiv");
+            var gameDiv=document.getElementById("gameDiv");
+            if(w<h || window.orientation==180||window.orientation==0){
+                //alert("请在系统设置里打开屏幕旋转，并在横屏状态下玩游戏！");
+                gameDiv.style.display="none";
+                tipDiv.style.display="block";
+                tipDiv.style.textAlign="center";
+                tipDiv.style.width=w+"px";
+                tipDiv.style.height=h+"px";
+            }
+            if(w>h || window.orientation==90||window.orientation==-90){
+                gameDiv.style.display="none";
+                tipDiv.style.display="none";
+                indexTime = setTimeout(showGame, 300);
+            }
+        }
+
+        function showGame(){
+            clearTimeout(indexTime);
+            document.getElementById("gameDiv").style.display ="block";
+        }
+
+        function checkLogo(){
+            var logoDiv = document.getElementById("logoDiv");
+            var uiWidth = 960;
+            var uiHeight = 640;
+            var _scaleY = Math.min(window.innerWidth / uiWidth, 1);
+            var _scaleX = _scaleY;
+            var _topY = (window.innerHeight - uiHeight*_scaleY) / 2 + window.innerHeight * 0.5;
+            var _leftX = (window.innerWidth - uiWidth*_scaleX) / 2 + window.innerWidth*0.5;
+
+            logoDiv.style.width = 406;
+            logoDiv.style.height = 406;
+            logoDiv.style.webkitTransform = 'scale('+_scaleX+','+_scaleY+')';
+            logoDiv.style.top = (window.innerHeight*0.5 - 406*0.5)+'px';
+            logoDiv.style.left = (window.innerWidth*0.5 - 406*0.5)+'px';
+            logoDiv.style.display = 'block';
+        }
+
+    </script>
+
 </head>
-<body style="height:100%;overflow-x: visible;" >
-    <div class="content">
-           <div class="content_head" id="content_head">
-               <div class="content_man" id="content_man">
-                      <img src="./images/man.png" style="width: 120px;"></img>
-                  </div>
-                   <div class="content_wnman" id="content_wnman">
-                      <img src="./images/wnman.png" style="width: 63px;"></img>
-                  </div>
-               <div class="content_head_bg"  id="content_head_bg">
-                 
-               </div>
-              <div class="share"  id="share" style="display:none;"><span id="share_txt" class="share_txt">分享到朋友圈赚取微信红包</span></div>
-           </div>
-            <div id="content_body"  class="content_body">
+<body >
+<div style="position:relative;" id="gameDiv"></div>
+<div id="tipDiv" style="color: #ffffff;display:none;text-align:center;">
+    <span style="display:block;margin: 50px;font-size: 30px ">请在系统设置里打开屏幕旋转，并在横屏状态下玩游戏！</span><br/>
+    <img src="resource/rotateBg.png" >
+</div>
+<div style="display: none" id="logoDiv">
+    <img src="resource/assets/logo.png" >
+</div>
+<script>
+    checkLogo();
+</script>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader_rotation.js"></script>
+<script src="launcher/game-min.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
 
-                <div class="content_txt" id="content_txt"></div>
+    /*
+     * wx.config( bodyConfig );
+     * 以及游戏启动
+     * */
+    function getSignPackage(){
+        app.starGame();
+        return;
 
-                <div class="content_body_txt" id="content_body_txt"></div>
-               <div class="btns" id="btns">
-                  <span class="content_pop" id="content_pop" style="display:none">提示：千次猛攻不如一次巧取</span>
-                <div id="content_btn1" class="content_btn1"></div>
-                <div id="content_btn2" class="content_btn2"></div>
-              </div>
-           </div>
-             <div  class="content_fooder2"  id="content_fooder2">
+        //resultPanel.getInstance().checkRedBagHandler(4); //分享成功 后调用4
+        $.ajax({
+            url:"",
+            dataType:"json",
+            data:data,
+            cache:false,
+            success:function(res){
+                // 填充微信相关的
 
-                
-             </div>
-    </div>
-     <script type="text/javascript">
-     window.onload=function(){
-      var i=0;
-    document.getElementById("content_fooder2").addEventListener('touchend', function (e) {
+                //启动游戏
+                app.starGame();
+            }
+        })
+    }
+    /*
+     * 红包状态检测
+     * */
+    function checkRedBag(){
+        resultPanel.getInstance().checkRedBagHandler(2);
+        return;
+        $.ajax({
+            url:"",
+            dataType:"json",
+            data:data,
+            cache:false,
+            success:function(res){
+                // 1 :可以正常领取
+                // 2 :（今天红包领完了）
+                // 3 :（已经领过红包）
 
-      window.location.href= "http://static.egret-labs.org/h5game/haidao/v0.04/index.html?from=singlemessage&isappinstalled=0";
-   }, false);
-    var i=0;
-    document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
-        fn1();
-     }, false);
-    
-
-
-     document.getElementById("content_btn2").addEventListener('touchend', function (e) { 
-                fn();
-     }, false);
-     function fn1(){
-       i++;
-       var bodytxt=document.getElementById("content_body_txt");
-       bodytxt.style.backgroundColor="#33301a";
-       bodytxt.style.color="#fff";
-       
-     
-      var man=document.getElementById("content_man");
-      document.getElementById("content_body_txt").style.display="block";
-       
-     if(i==1){content_man.style.left="10%"; 
-        bodytxt.innerHTML="猛攻"+i+"次,猛攻1000次就能抱得美人归!这是真的,不是骗人的！！！";}
-        else if(i==2){content_man.style.left="15%";
-      bodytxt.innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
-        else if(i==3){content_man.style.left="25%";
-      bodytxt.innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
-        else  if(i==10){
-       bodytxt.innerHTML="猛攻"+i+"次,千次猛攻不如巧取，要不要试试巧取?";
-               i=0;
-               fn1();
-       bodytxt.style.width="65%";
-       bodytxt.style.textAlign="left";
-          }
-      else{
-      document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次<br>要不要试试巧取? ！";
-      bodytxt.style.width="50%";
-      bodytxt.style.textAlign="center";
-      }
-     }
-     function fn(){
-          window.location.href= "game.html";
-            //document.getElementById("content_body_txt").style.display="none";
-            //document.getElementById("content_txt").style.display='none';
-            //document.getElementById("content_head_bg").style.display='none';
-            //document.getElementById("btns").style.display="none";
-            //document.getElementById("content_man").style.display="none";
-            //document.getElementById("content_wnman").style.display="none";
-            //document.getElementById("share").style.display="block";
-            //document.getElementById("content_head").style.cssText='background:url("./images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex: 4.5;';
-            //document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
-  }}
-       </script>
+                resultPanel.getInstance().checkRedBagHandler(1);
+            }
+        })
+    }
+</script>
 </body>
 </html>

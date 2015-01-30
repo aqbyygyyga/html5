@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html  style="height:100%;overflow-x: visible;" >
+<head>
+    <meta charset="utf-8">
+     <title>千次猛攻不如一次巧取</title>
+    <link href="./land/css/stylesheet.css" rel="stylesheet" media="all">
+     <script type="text/javascript">
+      var scale = 1, ratio = 1 ;
+
+      (function () {
+          
+          
+   
+          var text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no" />';
+          document.write(text);
+      })();
+  </script>
+</head>
+<body style="height:100%;overflow-x: visible;" >
+     
+    <div class="content">
+           <div class="content_head" id="content_head">
+               <div class="content_man" id="content_man">
+                      <img src="./land/images/man.png" style="width: 120px;"></img>
+                  </div>
+                   <div class="content_wnman" id="content_wnman">
+                      <img src="./land/images/wnman.png" style="width: 63px;"></img>
+                  </div>
+               <div class="content_head_bg"  id="content_head_bg">
+                 
+               </div>
+              <div class="share"  id="share" style="display:none;"><span id="share_txt" class="share_txt">分享到朋友圈赚取微信红包</span></div>
+           </div>
+            <div id="content_body"  class="content_body">
+
+                <div class="content_txt" id="content_txt"></div>
+
+                <div class="content_body_txt" id="content_body_txt"></div>
+               <div class="btns" id="btns">
+               
+                <div id="content_btn1" class="content_btn1"></div>
+                <div id="content_btn2" class="content_btn2"></div>
+                <span class="content_pop" id="content_pop" > &nbsp</span>
+                
+              </div>
+           </div>
+           <div id="scuress">
+                   <div id="reStart" ></div>
+                   <img id="scuress_img"   src="./land/images/content_scuress.png"></img>
+                </div>
+             <div  class="content_fooder2"  id="content_fooder2">
+
+                
+             </div>
+    </div>
+     <script type="text/javascript">
+     window.onload=function(){
+      var i=0;
+    document.getElementById("content_fooder2").addEventListener('touchend', function (e) {
+    //  window.location.href= "index.html";
+      //window.location.href= "http://static.egret-labs.org/h5game/haidao/v0.04/index.html?from=singlemessage&isappinstalled=0";
+   }, false);
+    var i=0;
+     var bodytxt=document.getElementById("content_body_txt");
+    document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
+      document.getElementById("content_pop").innerHTML="提示：巧取成功还可以获得现金红包";
+       bodytxt.style.backgroundColor="#33301a";
+       bodytxt.style.color="#fff";
+       document.getElementById("content_body_txt").style.display="block";
+       i++;
+       fn1();
+     }, false);
+     document.getElementById("content_btn2").addEventListener('touchend', function (e) { 
+               window.location.href= "index.html";
+     }, false);
+     document.getElementById("reStart").addEventListener('touchend', function (e) { 
+               reStart();
+     },
+      false); function fn1(){
+       if(i==1){
+          bodytxt.style.width="65%";
+          bodytxt.style.textAlign="left";
+           bodytxt.style.lineHeight="15px";
+          content_man.style.left="10%"; 
+
+        bodytxt.innerHTML="猛攻"+i+"次,猛攻1000次就能抱得美人归!这是真的,不是骗人的！！！";}
+        else if(i==2){content_man.style.left="15%";
+        bodytxt.innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
+        else if(i==3){content_man.style.left="25%";
+        bodytxt.innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
+        else  if(i>=1000){
+              fn();
+          }
+      else{
+         document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次<br>要不要试试巧取? ！";
+         bodytxt.style.width="50%";
+         bodytxt.style.textAlign="center";
+       }
+     }
+     function reStart(){
+          i=1;
+      var bodytxt=document.getElementById("content_body_txt");
+     
+      document.getElementById("content_pop").innerHTML="";
+       bodytxt.style.backgroundColor="#fff282";
+       bodytxt.style.color="#fff282";
+       document.getElementById("content_body_txt").style.display="none";
+       
+
+         fn1();
+
+           document.getElementById("content_body_txt").style.display="block";
+             document.getElementById("content_txt").style.display='block';
+             document.getElementById("content_head_bg").style.display='block';
+             document.getElementById("btns").style.display="block";
+             document.getElementById("content_man").style.display="block";
+             document.getElementById("content_wnman").style.display="block";
+             document.getElementById("share").style.display="none";
+             document.getElementById("content_head").style.cssText='background:url("./land/images/header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:6;'; 
+             document.getElementById("scuress").style.display="none";
+
+         
+     }
+     function fn(){
+          
+             document.getElementById("content_body_txt").style.display="none";
+             document.getElementById("content_txt").style.display='none';
+             document.getElementById("content_head_bg").style.display='none';
+             document.getElementById("btns").style.display="none";
+             document.getElementById("content_man").style.display="none";
+             document.getElementById("content_wnman").style.display="none";
+             document.getElementById("share").style.display="none";
+             document.getElementById("content_head").style.cssText='background:url("./land/images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:2;'; 
+             document.getElementById("scuress").style.display="block";
+           //  document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
+  }}
+       </script>
+</body>
+</html>
