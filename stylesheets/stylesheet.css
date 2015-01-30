@@ -216,9 +216,8 @@ input::-moz-focus-inner {
   width: 65%;
   height: 35px;
   margin: 5px auto;
-  background: #33301a;
-  color: #fff;
-  display: none;
+  background: #fff282;
+  color: #fff282;
   font-size: 0.4em;
   text-align: left;
   margin-bottom: 5px;
@@ -226,7 +225,7 @@ input::-moz-focus-inner {
 .content .content_body .btns {
   margin: 0 auto;
   width: 75%;
-  height: 130px;
+  height: 100px;
 }
 .content .content_body .btns .content_btn1 {
   background: url('../images/menggong.png') no-repeat;

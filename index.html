@@ -34,6 +34,7 @@
             <div id="content_body"  class="content_body">
 
                 <div class="content_txt" id="content_txt"></div>
+
                 <div class="content_body_txt" id="content_body_txt"></div>
                <div class="btns" id="btns">
                   <span class="content_pop" id="content_pop" style="display:none">提示：千次猛攻不如一次巧取</span>
@@ -53,34 +54,46 @@
 
       window.location.href= "http://static.egret-labs.org/h5game/haidao/v0.04/index.html?from=singlemessage&isappinstalled=0";
    }, false);
+    var i=0;
     document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
-      i++;
-       document.getElementById("content_pop").style.display="block";
-      var man=document.getElementById("content_man");
-      document.getElementById("content_body_txt").style.display="block";
-     document.getElementById("btns").style.height="100px"; 
-     if(i==1){content_man.style.left="10%"; 
-        document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次,猛攻1000次就能抱得美人归!这是真的,不是骗人的！！！";}
-        else if(i==2){content_man.style.left="15%";
-       document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
-        else if(i==3){content_man.style.left="25%";
-      document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
-        
-        else  if(i==1000){
-               fn();
-      }else{
- document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次<br>要不要试试巧取? ！";
- document.getElementById("content_body_txt").style.width="50%";
-  document.getElementById("content_body_txt").style.textAlign="center";
-      }
+        fn1();
      }, false);
+    
+
+
      document.getElementById("content_btn2").addEventListener('touchend', function (e) { 
                 fn();
-
-     
      }, false);
-      
-       function fn(){
+     function fn1(){
+       i++;
+       var bodytxt=document.getElementById("content_body_txt");
+       bodytxt.style.backgroundColor="#33301a";
+       bodytxt.style.color="#fff";
+       
+     
+      var man=document.getElementById("content_man");
+      document.getElementById("content_body_txt").style.display="block";
+       
+     if(i==1){content_man.style.left="10%"; 
+        bodytxt.innerHTML="猛攻"+i+"次,猛攻1000次就能抱得美人归!这是真的,不是骗人的！！！";}
+        else if(i==2){content_man.style.left="15%";
+      bodytxt.innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
+        else if(i==3){content_man.style.left="25%";
+      bodytxt.innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
+        else  if(i==10){
+       bodytxt.innerHTML="猛攻"+i+"次,千次猛攻不如巧取，要不要试试巧取?";
+               i=0;
+               fn1();
+       bodytxt.style.width="65%";
+       bodytxt.style.textAlign="left";
+          }
+      else{
+      document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次<br>要不要试试巧取? ！";
+      bodytxt.style.width="50%";
+      bodytxt.style.textAlign="center";
+      }
+     }
+     function fn(){
           window.location.href= "game.html";
             //document.getElementById("content_body_txt").style.display="none";
             //document.getElementById("content_txt").style.display='none';
