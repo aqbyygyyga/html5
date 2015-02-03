@@ -19,7 +19,8 @@
 </head>
 <body style="height:100%;overflow-x: visible;" >
      
-    <div class="content">
+         
+            <div class="content" id="content">
            <div class="content_head" id="content_head">
                <div class="content_man" id="content_man">
                       <img src="./land/images/man.png" style="width: 120px;"></img>
@@ -41,26 +42,30 @@
                
                 <div id="content_btn1" class="content_btn1"></div>
                 <div id="content_btn2" class="content_btn2"></div>
-                <span class="content_pop" id="content_pop" > &nbsp</span>
+               
                 
-              </div>
+              </div> <span class="content_pop" id="content_pop" >&nbsp;</span>
            </div>
+            <div id="reStart" ></div>
            <div id="scuress">
-                   <div id="reStart" ></div>
+                  
                    <img id="scuress_img"   src="./land/images/content_scuress.png"></img>
+                   <div id="downs">
+                   <img id="down1" src="./land/images/down1.png" width="150px"></img>
+                   <img id="down2" src="./land/images/down2.png" width="150px"></img></div>
                 </div>
-             <div  class="content_fooder2"  id="content_fooder2">
-
-                
-             </div>
-    </div>
+           
+            </div>
+            <div class="content_img" id="content_img1" style="display:none" >
+                <div class="content_img_man"></div>
+            </div>
+            <div class="content_img" id="content_img2" style="display:none"></div>
+            <div class="content_img" id="content_img3"  style="display:none"></div>
+     
      <script type="text/javascript">
      window.onload=function(){
       var i=0;
-    document.getElementById("content_fooder2").addEventListener('touchend', function (e) {
-    //  window.location.href= "index.html";
-      //window.location.href= "http://static.egret-labs.org/h5game/haidao/v0.04/index.html?from=singlemessage&isappinstalled=0";
-   }, false);
+   
     var i=0;
      var bodytxt=document.getElementById("content_body_txt");
     document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
@@ -72,7 +77,29 @@
        fn1();
      }, false);
      document.getElementById("content_btn2").addEventListener('touchend', function (e) { 
-               window.location.href= "index.html";
+              // window.location.href= "index.html";
+              document.getElementById("content").style.display="none";
+              document.getElementById("content_img1").style.display="block";
+              document.getElementById("content_img2").style.display="none";
+              document.getElementById("content_img3").style.display="none";
+     }, false);
+     document.getElementById("content_img1").addEventListener('touchend', function (e) { 
+              // window.location.href= "index.html";
+              document.getElementById("content").style.display="none";
+              document.getElementById("content_img1").style.display="none";
+              document.getElementById("content_img2").style.display="block";
+              document.getElementById("content_img3").style.display="none";
+     }, false);
+     document.getElementById("content_img2").addEventListener('touchend', function (e) { 
+              // window.location.href= "index.html";
+              document.getElementById("content").style.display="none";
+              document.getElementById("content_img1").style.display="none";
+              document.getElementById("content_img2").style.display="none";
+              document.getElementById("content_img3").style.display="block";
+     }, false);
+     document.getElementById("content_img3").addEventListener('touchend', function (e) { 
+                window.location.href= "index.html";
+               
      }, false);
      document.getElementById("reStart").addEventListener('touchend', function (e) { 
                reStart();
@@ -89,7 +116,7 @@
         bodytxt.innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
         else if(i==3){content_man.style.left="25%";
         bodytxt.innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
-        else  if(i>=1000){
+        else  if(i>=10){
               fn();
           }
       else{
@@ -102,9 +129,8 @@
           i=1;
       var bodytxt=document.getElementById("content_body_txt");
      
-      document.getElementById("content_pop").innerHTML="";
-       bodytxt.style.backgroundColor="#fff282";
-       bodytxt.style.color="#fff282";
+      document.getElementById("content_pop").innerHTML="&nbsp";
+       
        document.getElementById("content_body_txt").style.display="none";
        
 
@@ -120,7 +146,8 @@
              document.getElementById("content_head").style.cssText='background:url("./land/images/header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:6;'; 
              document.getElementById("scuress").style.display="none";
 
-         
+           document.getElementById("reStart").style.display="none";
+
      }
      function fn(){
           
@@ -131,8 +158,9 @@
              document.getElementById("content_man").style.display="none";
              document.getElementById("content_wnman").style.display="none";
              document.getElementById("share").style.display="none";
-             document.getElementById("content_head").style.cssText='background:url("./land/images/scuree_header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:2;'; 
+             document.getElementById("content_head").style.cssText='background:url("./land/images/scuree_header.png") no-repeat 0 0;background-size: 70% 90%;-webkit-box-flex:1;background-position: center;'; 
              document.getElementById("scuress").style.display="block";
+             document.getElementById("reStart").style.display="block";
            //  document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
   }}
        </script>
