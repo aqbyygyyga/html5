@@ -57,10 +57,16 @@
            
             </div>
             <div class="content_img" id="content_img1" style="display:none" >
-                <div class="content_img_man"></div>
+                <img class="content_img_man" src="./land/images/man.png" style="width: 180px;position: absolute;bottom: 0px;"></img>
+                <img src="./land/images/duihua1.png" style="width: 150px;position: absolute;bottom: 155px;left: 160px;"></img>
             </div>
-            <div class="content_img" id="content_img2" style="display:none"></div>
-            <div class="content_img" id="content_img3"  style="display:none"></div>
+            <div class="content_img" id="content_img2" style="display:none">
+                 <img class="content_img_nvman" src="./land/images/wnman.png" style="width: 110px;position: absolute;bottom: 0px;left: 55%;"></img>
+                     <img src="./land/images/duihua2.png" style="width: 170px;position: absolute;bottom: 185px;left: 10px;"></img>
+            </div>
+            <div class="content_img" id="content_img3"  style="display:none">
+               <img class="content_img_shuoming" src="./land/images/shuoming.png" style="width: 300px;position: absolute;top:35%;margin-left:-150px;left:50%;"></img>
+            </div>
             <img src="./land/images/scuree_header.png" style="display:none"></img>
      <script type="text/javascript">
      window.onload=function(){
@@ -72,7 +78,7 @@
      var bodytxt=document.getElementById("content_body_txt");
     document.getElementById("content_btn1").addEventListener('touchend', function (e) { 
       document.getElementById("content_pop").innerHTML="提示：巧取成功还可以获得现金红包";
-       bodytxt.style.backgroundColor="#33301a";
+       bodytxt.style.background="rgba(0, 0, 0, 0.4)";
        bodytxt.style.color="#fff";
        document.getElementById("content_body_txt").style.display="block";
        i++;
