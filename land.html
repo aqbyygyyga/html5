@@ -23,10 +23,10 @@
             <div class="content" id="content">
            <div class="content_head" id="content_head">
                <div class="content_man" id="content_man">
-                      <img src="./land/images/man.png" style="width: 120px;"></img>
+                      <img src="./land/images/man.png" style="width: 130px;"></img>
                   </div>
                    <div class="content_wnman" id="content_wnman">
-                      <img src="./land/images/wnman.png" style="width: 63px;"></img>
+                      <img src="./land/images/wnman.png" style="width: 75px;"></img>
                   </div>
                <div class="content_head_bg"  id="content_head_bg">
                  
@@ -102,9 +102,10 @@
                
      }, false);
      document.getElementById("reStart").addEventListener('touchend', function (e) { 
+
                reStart();
-     },
-      false); function fn1(){
+     },false);
+      function fn1(){
        if(i==1){
           bodytxt.style.width="65%";
           bodytxt.style.textAlign="left";
@@ -114,7 +115,7 @@
         bodytxt.innerHTML="猛攻"+i+"次,猛攻1000次就能抱得美人归!这是真的,不是骗人的！！！";}
         else if(i==2){content_man.style.left="15%";
         bodytxt.innerHTML="猛攻"+i+"次,还点?猛攻1000次就能抱得美人归!这不是骗人的！！";}
-        else if(i==3){content_man.style.left="25%";
+        else if(i==3){content_man.style.left="23%";
         bodytxt.innerHTML="猛攻"+i+"次,你真勇敢！猛攻1000次就能抱得美人归!真不是骗人的！！";}
         else  if(i>=10){
               fn();
@@ -123,6 +124,8 @@
          document.getElementById("content_body_txt").innerHTML="猛攻"+i+"次<br>要不要试试巧取? ！";
          bodytxt.style.width="50%";
          bodytxt.style.textAlign="center";
+         bodytxt.style.left="25%";
+          
        }
      }
      function reStart(){
@@ -145,7 +148,7 @@
              document.getElementById("share").style.display="none";
              document.getElementById("content_head").style.cssText='background:url("./land/images/header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:6;'; 
              document.getElementById("scuress").style.display="none";
-
+        
            document.getElementById("reStart").style.display="none";
 
      }
@@ -158,9 +161,10 @@
              document.getElementById("content_man").style.display="none";
              document.getElementById("content_wnman").style.display="none";
              document.getElementById("share").style.display="none";
-             document.getElementById("content_head").style.cssText='background:url("./land/images/scuree_header.png") no-repeat 0 0;background-size: 70% 90%;-webkit-box-flex:1;background-position: center;'; 
+             document.getElementById("content_head").style.cssText='background:url("./land/images/scuree_header.png") no-repeat 0 0;background-size: 75% 95%;-webkit-box-flex:2.5;background-position: center;'; 
              document.getElementById("scuress").style.display="block";
              document.getElementById("reStart").style.display="block";
+               document.getElementById("content_pop").innerHTML="&nbsp;";
            //  document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
   }}
        </script>

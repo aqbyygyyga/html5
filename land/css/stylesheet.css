@@ -156,7 +156,7 @@ input::-moz-focus-inner {
   background-color: #fff282;
 }
 .content .content_head {
-  -webkit-box-flex: 6;
+  -webkit-box-flex: 2;
   position: relative;
    
   z-index: 0;
@@ -188,7 +188,7 @@ input::-moz-focus-inner {
 .content .content_head .content_wnman {
   z-index: 1;
   position: absolute;
-  left: 60%;
+  left: 65%;
   bottom: 0px;
 }
 .content .content_head .content_head_bg { 
@@ -201,9 +201,10 @@ input::-moz-focus-inner {
 }
 .content .content_body {
   
-  -webkit-box-flex: 1;
+  -webkit-box-flex: 1.7;
  
   z-index: 999;
+  position: relative;
 }
 .content .content_body .content_txt {
   background: url('../images/content_txt.png') no-repeat;
@@ -211,7 +212,10 @@ input::-moz-focus-inner {
   width: 320px;
   height: 126px;
   margin: 0 auto;
-  margin-top: 0px;
+  position: absolute;
+  margin-top: -65px;
+  left: 50%;
+margin-left: -160px;
 }
 .content .content_body .content_body_txt {
   width: 65%;
@@ -221,18 +225,24 @@ input::-moz-focus-inner {
   font-size: 0.4em;
   text-align: left;
   margin-bottom: 5px;
+  position: absolute;
+left: 17.5%;
+top: 20%;
 }
 .content .content_body .btns {
   margin: 0 auto;
-  width: 75%;
+  width: 85%;
   height: 100px;
+  position: absolute;
+  left:7.5%;
+  top:40%;
 }
 .content .content_body .btns .content_btn1 {
   background: url('../images/menggong.png') no-repeat;
   float: left;
   background-size: 100% 100%;
   width: 120px;
-  height: 96px;
+  height: 93px;
   display: block;
 }
 .content .content_body .btns .content_btn2 {
@@ -240,7 +250,7 @@ input::-moz-focus-inner {
   float: right;
   background-size: 100% 100%;
   width: 120px;
-  height: 96px;
+  height: 93px;
 }
 .content .content_pop {
   font-size: 10px;
@@ -248,7 +258,7 @@ input::-moz-focus-inner {
   display: block;
   float: right;
 position: absolute;
-left: 35%;
+left: 35%;top: 85%;
 }
 .content .content_fooder {
   height: 0%;
@@ -275,7 +285,7 @@ left: 35%;
 }
 #scuress{
   position: absolute;
-  top:50%;
+  top:45%;
   margin: 0 auto;
   width: 100%;
   display: none;text-align: center;
