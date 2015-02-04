@@ -204,7 +204,7 @@ input::-moz-focus-inner {
   -webkit-box-flex: 1.7;
  
   z-index: 999;
-  position: relative;
+  
 }
 .content .content_body .content_txt {
   background: url('../images/content_txt.png') no-repeat;
@@ -236,7 +236,7 @@ padding-left: 5px;
   height: 100px;
   position: absolute;
   left:7.5%;
-  top:45%;
+  top: 75%;
 }
 .content .content_body .btns .content_btn1 {
   background: url('../images/menggong.png') no-repeat;
