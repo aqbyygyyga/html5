@@ -149,33 +149,31 @@
       function fn1(){
        if(i==1){
           bodytxt.style.width="65%";
-         
-           bodytxt.style.lineHeight="50px";
+          bodytxt.style.textAlign="left ";
+           bodytxt.style.lineHeight="25px";
            content_man.style.left="10%"; 
            bodytxt.style.left="17%";
            bodytxt.innerHTML="哥哥你好猛哦！猛攻1000次我就跟你在一起！";}
-        else if(i==2){content_man.style.left="15%";  
+        else if(i==2){content_man.style.left="15%";   bodytxt.style.lineHeight="50px";
         bodytxt.innerHTML="继续猛攻？！好吧，那我等着你...";}
         else if(i==3){content_man.style.left="23%";
         bodytxt.innerHTML="还猛攻？哥哥你可真有毅力！";}
         else if(i>=4&&i<=10){content_man.style.left="23%";
         bodytxt.innerHTML="嗯...我帮你数着，猛攻第"+i+"次，哥哥你继续...";}
-         else if(i>=11&&i<=20){content_man.style.left="23%";
+         else if(i>=11&&i<=20){content_man.style.left="23%"; 
         bodytxt.innerHTML="猛攻已经第"+i+"了！要不试试巧取？";}
          else if(i>=21&&i<=50){
           content_man.style.left="23%";
           bodytxt.style.lineHeight="25px";
-            bodytxt.style.textAlign="center";
-        bodytxt.innerHTML="哥哥你打算创造猛攻吉尼斯记录？<br>已经猛攻"+i+"次了，试试巧取嘛~";  }
+          bodytxt.innerHTML="哥哥你打算创造猛攻吉尼斯记录？<br>已经猛攻"+i+"次了，试试巧取嘛~";  }
         else if(i>=51&&i<=500){
-         bodytxt.style.textAlign="center";
-        bodytxt.innerHTML="猛攻第"+i+"次…真爱等得好辛苦!<br>再不巧取，我要嫌你笨了!!";} 
+          bodytxt.innerHTML="猛攻第"+i+"次…真爱等得好辛苦!<br>再不巧取，我要嫌你笨了!!";} 
 
          else if(i>=501&&i<=900){
          
          bodytxt.innerHTML="猛攻第"+i+"次<br>哥哥你听说过千次猛攻不如一次巧取么？";  }
         else  if(i>=901){
-             document.getElementById("content_body_txt").innerHTML="猛攻第"+i+"次,我了解你猛攻的决心了，最后100次等着你！";  bodytxt.style.textAlign="left ";
+             document.getElementById("content_body_txt").innerHTML="猛攻第"+i+"次,我了解你猛攻的决心了，最后100次等着你！";  
              bodytxt.style.width="50%";
        
               bodytxt.style.left="25%";
