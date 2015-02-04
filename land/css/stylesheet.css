@@ -219,15 +219,16 @@ margin-left: -160px;
 }
 .content .content_body .content_body_txt {
   width: 65%;
-  height: 35px;
+  height: 50px;
   margin: 5px auto;
  
   font-size: 0.4em;
   text-align: left;
   margin-bottom: 5px;
   position: absolute;
-left: 17.5%;
+left: 17%;
 top: 20%;
+padding-left: 10px;
 }
 .content .content_body .btns {
   margin: 0 auto;
@@ -235,7 +236,7 @@ top: 20%;
   height: 100px;
   position: absolute;
   left:7.5%;
-  top:40%;
+  top:45%;
 }
 .content .content_body .btns .content_btn1 {
   background: url('../images/menggong.png') no-repeat;
@@ -258,7 +259,8 @@ top: 20%;
   display: block;
   float: right;
 position: absolute;
-left: 35%;top: 85%;
+left: 37%;top: 85%;
+ 
 }
 .content .content_fooder {
   height: 0%;
