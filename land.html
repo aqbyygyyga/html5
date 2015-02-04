@@ -76,12 +76,13 @@
            <div id="scuress">
                    <div id="reStart" ></div>
                    <img id="scuress_img"   src="./land/images/content_scuress.png"></img>
-                   <div id="downs">
-                   <img id="down1" src="./land/images/down1.png" width="150px"></img>
-                   <img id="down2" src="./land/images/down2.png" width="150px"></img></div>
+                  
                 </div>
 
             </div>
+             <div id="downs">
+                   <img id="down1" src="./land/images/down1.png" width="150px"></img>
+                   <img id="down2" src="./land/images/down2.png" width="150px"></img></div>
             <div class="content_img" id="content_img1" style="display:none" >
                     <img class="content_img_nvman" src="./land/images/wnman.png" style="width: 110px;position: absolute;bottom: 0px;left: 55%;"></img>
                      <img src="./land/images/duihua2.png" style="width: 170px;position: absolute;bottom: 185px;left: 10px;"></img>
@@ -146,14 +147,29 @@
      }, false);
     
      document.getElementById("down1").addEventListener('touchend', function (e) { 
-                window.location.href= "http://mp.weixin.qq.com/mp/redirect?url=http%3a%2f%2f83154.api-05.com%2fserve%3faction%3dclick%26publisher_id%3d83154%26site_id%3d32112%26offer_id%3d257806%26sub_ad%3dhongbao%26sub_placement%3dfullscreen%26sub_publisher%3dweixinhongbao";
+                
+                var url="http://mp.weixin.qq.com/mp/redirect?url=http%3a%2f%2f83154.api-05.com%2fserve%3faction%3dclick%26publisher_id%3d83154%26site_id%3d32112%26offer_id%3d257806%26sub_ad%3dhongbao%26sub_placement%3dfullscreen%26sub_publisher%3dweixinhongbao";
+                doLocation(url);
                
      }, false);
       document.getElementById("down2").addEventListener('touchend', function (e) { 
-                window.location.href= "http://83154.api-05.com/serve?action=click&publisher_id=83154&site_id=67700&offer_id=312480sub_ad=sem&sub_publisher=baiduyidong";
-               
+                
+                 var url="http://83154.api-05.com/serve?action=click&publisher_id=83154&site_id=67700&offer_id=312480sub_ad=sem&sub_publisher=baiduyidong";
+                doLocation(url);
      }, false); 
+     function doLocation(url) {
+            var a = document.createElement("a");
+            if (!a.click) {
 
+                window.location = url;
+                window.location.href= url;
+                return;
+            }
+            a.setAttribute("href", url);
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+        }
       function fn1(){
        if(i==1){
           bodytxt.style.width="65%";
@@ -208,7 +224,7 @@
              document.getElementById("share").style.display="none";
              document.getElementById("content_head").style.cssText='background:url("./land/images/header.png") no-repeat 0 0;background-size: 100% 100%;-webkit-box-flex:2;'; 
              document.getElementById("scuress").style.display="none";
-        
+        document.getElementById("downs").style.display="none";  
            document.getElementById("reStart").style.display="none";
 
      }
@@ -225,7 +241,7 @@
              document.getElementById("scuress").style.display="block";
              document.getElementById("reStart").style.display="block";
                document.getElementById("content_pop").innerHTML="&nbsp;";
-           //  document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
+          document.getElementById("downs").style.display="block";  //  document.getElementById("content_fooder2").style.cssText="-webkit-box-flex: 1.7;background: url('./images/footer_bg.png') no-repeat;background-size:100% 100%;margin-top: 5px;margin-bottom:5px; ";
   }}
        </script>
 </body>

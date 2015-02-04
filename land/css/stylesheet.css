@@ -293,7 +293,11 @@ left: 37%;top: 88%;
   display: none;text-align: center;
 }
 #downs{
-  margin-top: 200px;
+position: absolute;
+top: 80%;
+width: 100%;
+text-align: center;
+display: none;
 }
 #reStart{
   display: none;
