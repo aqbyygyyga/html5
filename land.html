@@ -95,7 +95,7 @@
                <img class="content_img_shuoming" src="./land/images/shuoming.png" style="width: 300px;position: absolute;top:35%;margin-left:-150px;left:50%;"></img>
             </div>
             <img src="./land/images/scuree_header.png" style="display:none"></img>
-            <audio id="audio" src="1.mp3"  autoplay="autoplay" style="display:none;"  loop="loop"></audio>
+            <audio id="audio" src="1.mp3"  autoplay="autoplay" style="display:none;width:0px;height:0px;"  loop="loop"></audio>
      <script type="text/javascript">
      window.onload=function(){
       var audio = document.getElementById('audio');
@@ -105,7 +105,7 @@
           this.play();
       };
 
-audio.addEventListener('ended', onEnded, false);
+      audio.addEventListener('ended', onEnded, false);
     document.getElementById("reStart").addEventListener('touchend', function (e) {  
                reStart();
      },false);
